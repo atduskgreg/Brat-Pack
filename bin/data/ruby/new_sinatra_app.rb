@@ -13,13 +13,24 @@ ruby_dir = parts.join("/")
 
 `cp #{ruby_dir}/template/* #{destination}`
 
-
-vegas_template = open("template/vegas_bin.erb").read
-
 path_to_app = destination
 app_name = destination.split("/").last
 
-File.open("#{ruby_dir}/apps/#{app_name}", "w"){|f| f<< template.result(binding)}
+template = ERB.new <<-TEMP
+#!/usr/bin/env ruby
 
-`chmod a+x "#{ruby_dir}/apps/#{app_name}`
+require '<%= path_to_app %>'
+require 'vegas'
+
+Vegas::Runner.new(Sinatra::Application, '<%= app_name %>')})
+TEMP
+
+# raise "THIS IS THE OUTPUT: #{template.result(binding)}"
+`touch #{ruby_dir}/apps/#{app_name}`
+`echo "#{template.result(binding)}" > #{ruby_dir}/apps/#{app_name}`
+
+
+# File.open("#{ruby_dir}/apps/#{app_name}", "w"){|f| f<< }
+
+`chmod a+x #{ruby_dir}/apps/#{app_name}`
 

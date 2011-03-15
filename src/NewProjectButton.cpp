@@ -48,7 +48,9 @@ void NewProjectButton::onPress(int x, int y, int button)
 	
 	result += " '" + command + "' '" +  files[0] + "'";
 	
-	//system(result.c_str());
+	system(result.c_str());
+	
+	cout << result << endl;
 	
 	Project * p = new Project();
 	p->folder = files[0];

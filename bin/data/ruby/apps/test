@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require '/Users/Rune/Desktop/test'
+require 'vegas'
+
+Vegas::Runner.new(Sinatra::Application, 'test')})
+
