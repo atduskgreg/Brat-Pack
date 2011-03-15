@@ -1,0 +1,5 @@
+Create new sinatra app
+Start / stop sinatra app
+Run with shotgun
+gem management
+Deploy to heroku
