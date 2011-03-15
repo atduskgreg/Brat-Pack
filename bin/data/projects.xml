@@ -1,8 +1,3 @@
 <projects>
-    <project folder="mysinatraapp" />
-    <project folder="/Users/Rune/Desktop/test" />
-    <project folder="/Users/Rune/Desktop/test" />
-    <project folder="/Users/Rune/Desktop/test" />
-    <project folder="/Users/Rune/Desktop/test" />
-    <project path="/Users/Rune/Desktop/test" name="FAT/apps/Other/Brat-Pack/bin/bratPackDebug.app/Contents/MacOS/../../../data/ruby/new_sinatra_app.rb"></project>
+    <project path="/Users/Rune/Desktop/test" name="test"></project>
 </projects>

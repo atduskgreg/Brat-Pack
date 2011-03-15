@@ -22,4 +22,7 @@ private:
 	ofImage button;
 	std::vector<string> files;
 	ProjectList * project_list;
+	
+	string getFolderNameFromPath(string path);
+	string getEscapedPath(string path);
 };

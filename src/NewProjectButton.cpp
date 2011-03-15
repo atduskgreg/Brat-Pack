@@ -33,6 +33,20 @@ void NewProjectButton::onPress(int x, int y, int button)
 	s.allowMultipleSelection = false;
 	files = openDialog(s);
 	string command = ofToDataPath("ruby/new_sinatra_app.rb", true);
+	string result = getEscapedPath(command);
+	
+	system(result.c_str());
+	
+	cout << result << endl;
+	
+	Project * p = new Project();
+	p->path = files[0];
+	p->name = getFolderNameFromPath(files[0]);
+	project_list->save_project(p);
+}
+
+string NewProjectButton::getEscapedPath(string command)
+{
 	vector <string> split = ofSplitString(command, " ");
 	string result = "ruby ";
 	
@@ -48,13 +62,12 @@ void NewProjectButton::onPress(int x, int y, int button)
 	
 	result += " '" + command + "' '" +  files[0] + "'";
 	
-	system(result.c_str());
-	
-	cout << result << endl;
-	
-	Project * p = new Project();
-	p->path = files[0];
-	p->name = split[split.size() - 1];
-	project_list->save_project(p);
+	return result;
+}
+
+string NewProjectButton::getFolderNameFromPath(string path)
+{
+	vector <string> split = ofSplitString(path, "/");
+	return split[split.size() - 1];
 }
 

@@ -32,7 +32,7 @@ void ProjectList::load_projects()
 				Project * project = new Project();
 				project->setPos(xPos, yPos + (30 * i));
 				project->path = _xml.getAttribute("project", "path", "nothing", i);
-				project->path = _xml.getAttribute("project", "name", "nothing", i);
+				project->name = _xml.getAttribute("project", "name", "nothing", i);
 				projects.push_back(project);
 			}
 			
