@@ -28,7 +28,7 @@ void MyButton::onPress(int x, int y, int button)
 	s.canChooseFiles = false;
 	s.allowMultipleSelection = false;
 	files = openDialog(s);
-	
-	cout << files[0];
+	string command = ofToDataPath("ruby/new_sinatra_app.rb", true) + " " + files[0];
+	system(command.c_str());
 }
 
