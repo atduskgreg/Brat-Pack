@@ -1,10 +1,10 @@
 #include "MyButton.h"
 
-MyButton::MyButton(int xPos, int yPos)
+MyButton::MyButton(int xPos, int yPos, string img_name)
 {
 	enableMouseEvents();
 	
-	button.loadImage("button.png");
+	button.loadImage(img_name);
 
 	setPos(xPos, yPos);
 	setSize(button.width, button.height);
@@ -31,7 +31,7 @@ void MyButton::onPress(int x, int y, int button)
 	string command = ofToDataPath("ruby/new_sinatra_app.rb", true);
 	vector <string> split = ofSplitString(command, " ");
 	cout << split.size();
-	string result = "";
+	string result = "ruby ";
 	
 	for(int i = 0; i < split.size(); i++)
 	{
@@ -43,7 +43,7 @@ void MyButton::onPress(int x, int y, int button)
 		}
 	}
 	
-	result += " " + command + " " + files[0];
+	result += " '" + command + "' '" +  files[0] + "'";
 	
 	
 	cout << result << endl;

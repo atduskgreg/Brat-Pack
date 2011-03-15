@@ -8,7 +8,7 @@ class MyButton : public ofxMSAInteractiveObject
 	
 public:
 	
-	MyButton(int xPos, int yPos); 
+	MyButton(int xPos, int yPos, string img_name); 
 	
 	void update(); 
 	void draw(); 
