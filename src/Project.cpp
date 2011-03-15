@@ -62,8 +62,8 @@ void Project::setPos(int newX, int newY)
 { 
 	pos.x = newX; 
 	pos.y = newY;  
-	start->setPos(pos.x + 200, pos.y);
-	stop->setPos(pos.x + 335, pos.y);
+	start->setPos(pos.x + 200, pos.y - 15);
+	stop->setPos(pos.x + 335, pos.y - 15);
 }
 				   
 string Project::getEscapedPath(string command)

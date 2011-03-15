@@ -21,5 +21,6 @@ private:
 	ofxXmlSettings _xml;
 	
 	ofPoint pos;
+	int spacing;
 	
 };

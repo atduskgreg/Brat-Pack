@@ -2,7 +2,9 @@
 
 ProjectList::ProjectList()
 {
-
+	pos.x = 100;
+	pos.y = 300;
+	spacing = 30;
 }
 
 void ProjectList::update()
@@ -19,10 +21,7 @@ void ProjectList::draw()
 }
 
 void ProjectList::load_projects()
-{
-	int xPos = 100;
-	int yPos = 200;
-	
+{	
 	if(_xml.loadFile("projects.xml"))
 	{
 		if(_xml.pushTag("projects", 0))
@@ -30,7 +29,7 @@ void ProjectList::load_projects()
 			for(int i = 0; i < _xml.getNumTags("project"); i++) 
 			{
 				Project * project = new Project();
-				project->setPos(xPos, yPos + (30 * i));
+				project->setPos(pos.x, pos.y + (spacing * i));
 				project->path = _xml.getAttribute("project", "path", "nothing", i);
 				project->name = _xml.getAttribute("project", "name", "nothing", i);
 				projects.push_back(project);
@@ -46,6 +45,7 @@ void ProjectList::load_projects()
 void ProjectList::save_project(Project * p)
 {	
 	projects.push_back(p);
+	p->setPos(pos.x, pos.y + (spacing * (projects.size() - 1)));
 	
 	_xml.pushTag("projects", 0);
 	
