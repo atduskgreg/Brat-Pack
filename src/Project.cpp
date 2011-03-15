@@ -2,6 +2,7 @@
 
 Project::Project()
 {	
+	font.loadFont("Helvetica LT.ttf", 12);
 	startPressed = false;
 	stopPressed = false;
 	
@@ -24,7 +25,8 @@ void Project::draw()
 {
 	ofSetColor(0, 0, 0);
 	ofFill();
-	ofDrawBitmapString(name, pos.x, pos.y);
+	font.drawString(name, pos.x, pos.y);
+	//ofDrawBitmapString(name, pos.x, pos.y);
 	
 	ofSetColor(255, 255, 255);
 	ofEnableAlphaBlending();
@@ -37,6 +39,11 @@ void Project::draw()
 		{
 			running = false;
 			cout << "Stop server \n";
+			
+			string command = ofToDataPath("ruby/apps/" + name, true);
+			string result = Tools::getEscapedPath(command) + " -k";
+			
+			system(result.c_str());
 		}
 	}
 	else
@@ -64,4 +71,8 @@ void Project::setPos(int newX, int newY)
 	pos.y = newY;  
 	start->setPos(pos.x + 200, pos.y - 15);
 	stop->setPos(pos.x + 335, pos.y - 15);
+}
+
+string Project::getURL()
+{
 }

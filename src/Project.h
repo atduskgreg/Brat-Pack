@@ -13,6 +13,8 @@ public:
 	
 	void setPos(int newX, int newY);
 	
+	string getURL();
+	
 	void update(); 
 	void draw(); 
 	
@@ -32,5 +34,7 @@ private:
 	bool stopPressed;
 	
 	string getEscapedPath(string command);
+	
+	ofTrueTypeFont font;
 	
 };
