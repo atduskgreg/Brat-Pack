@@ -1,7 +1,8 @@
 require 'fileutils'
 
-destination = ARGV[0]
+ruby_dir = ARGV[0]
+destination = ARGV[1]
 
 destination.gsub!(' ', '\ ')
 
-FileUtils.cp_r("#{File.expand_path(File.dirname("."))}/template", destination)
+FileUtils.cp_r("#{ruby_dir}/template", destination)
