@@ -2,7 +2,8 @@
 #define _TEST_APP
 
 #include "ofMain.h"
-#include "MyButton.h"
+#include "NewProjectButton.h"
+#include "ProjectList.h"
 
 class testApp : public ofBaseApp {
 
@@ -20,7 +21,8 @@ class testApp : public ofBaseApp {
 		void windowResized(int w, int h);
 	private:
 	
-	MyButton * btn;
+	ProjectList * project_list;
+	NewProjectButton * btn;
 };
 
 #endif

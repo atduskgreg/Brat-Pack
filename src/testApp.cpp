@@ -3,16 +3,22 @@
 //--------------------------------------------------------------
 void testApp::setup()
 {
-	btn = new MyButton(100, 100, "newproject.png");
+	project_list = new ProjectList();
+	project_list->load_projects();
+	
+	btn = new NewProjectButton(100, 100, "newproject.png", project_list);
 }
 
 //--------------------------------------------------------------
 void testApp::update()
 {
+	project_list->update();
 }
 
 //--------------------------------------------------------------
-void testApp::draw(){
+void testApp::draw()
+{
+	project_list->draw();
 	btn->draw();
 }
 
@@ -37,8 +43,8 @@ void testApp::mouseDragged(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
-void testApp::mousePressed(int x, int y, int button){
-
+void testApp::mousePressed(int x, int y, int button)
+{
 }
 
 //--------------------------------------------------------------
