@@ -4,7 +4,8 @@ gems = [
   "sinatra",
   "dm-core",
   "dm-migrations",
-  "shotgun"
+  "shotgun",
+  "vegas"
 ]
 
 gems.each do |gem_name|
