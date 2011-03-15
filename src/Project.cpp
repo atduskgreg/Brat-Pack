@@ -46,9 +46,12 @@ void Project::draw()
 		if(start->isMousePressed())
 		{
 			running = true;
-			cout << "Stop server \n";
+			cout << "Start server \n";
 			
-			// shell
+			string command = ofToDataPath("ruby/apps/" + name, true);
+			string result = getEscapedPath(command);
+			
+			system(result.c_str());
 		}
 	}
 
@@ -61,4 +64,24 @@ void Project::setPos(int newX, int newY)
 	pos.y = newY;  
 	start->setPos(pos.x + 200, pos.y);
 	stop->setPos(pos.x + 335, pos.y);
+}
+				   
+string Project::getEscapedPath(string command)
+{
+	vector <string> split = ofSplitString(command, " ");
+	string result = "";
+	
+	for(int i = 0; i < split.size(); i++)
+	{
+		result += split[i];
+		
+		if(i < split.size() - 1)
+		{
+			result += "\\ ";
+		}
+	}
+	
+	cout << result << endl;
+	
+	return result;
 }

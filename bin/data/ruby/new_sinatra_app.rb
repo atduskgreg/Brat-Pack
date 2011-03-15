@@ -19,10 +19,10 @@ app_name = destination.split("/").last
 template = ERB.new <<-TEMP
 #!/usr/bin/env ruby
 
-require '<%= path_to_app %>'
+require '<%= path_to_app %>/app.rb'
 require 'vegas'
 
-Vegas::Runner.new(Sinatra::Application, '<%= app_name %>')})
+Vegas::Runner.new(Sinatra::Application, '<%= app_name %>')
 TEMP
 
 # raise "THIS IS THE OUTPUT: #{template.result(binding)}"

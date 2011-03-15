@@ -30,4 +30,6 @@ private:
 	bool startPressed;
 	bool stopPressed;
 	
+	string getEscapedPath(string command);
+	
 };

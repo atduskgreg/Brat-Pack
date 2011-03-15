@@ -37,7 +37,7 @@ void NewProjectButton::onPress(int x, int y, int button)
 	
 	system(result.c_str());
 	
-	cout << result << endl;
+	//cout << result << endl;
 	
 	Project * p = new Project();
 	p->path = files[0];
