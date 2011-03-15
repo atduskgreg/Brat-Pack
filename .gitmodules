@@ -1,0 +1,3 @@
+[submodule "heroku-sinatra-app"]
+	path = heroku-sinatra-app
+	url = https://github.com/sinatra/heroku-sinatra-app.git
