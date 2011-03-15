@@ -49,7 +49,7 @@ void Project::draw()
 			cout << "Start server \n";
 			
 			string command = ofToDataPath("ruby/apps/" + name, true);
-			string result = getEscapedPath(command);
+			string result = Tools::getEscapedPath(command);
 			
 			system(result.c_str());
 		}
@@ -64,24 +64,4 @@ void Project::setPos(int newX, int newY)
 	pos.y = newY;  
 	start->setPos(pos.x + 200, pos.y - 15);
 	stop->setPos(pos.x + 335, pos.y - 15);
-}
-				   
-string Project::getEscapedPath(string command)
-{
-	vector <string> split = ofSplitString(command, " ");
-	string result = "";
-	
-	for(int i = 0; i < split.size(); i++)
-	{
-		result += split[i];
-		
-		if(i < split.size() - 1)
-		{
-			result += "\\ ";
-		}
-	}
-	
-	cout << result << endl;
-	
-	return result;
 }

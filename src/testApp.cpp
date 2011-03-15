@@ -6,7 +6,7 @@ void testApp::setup()
 	project_list = new ProjectList();
 	project_list->load_projects();
 	
-	btn = new NewProjectButton(100, 100, "newproject.png", project_list);
+	btn = new NewProjectButton(10, 10, "newproject.png", project_list);
 }
 
 //--------------------------------------------------------------

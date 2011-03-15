@@ -2,8 +2,8 @@
 
 ProjectList::ProjectList()
 {
-	pos.x = 100;
-	pos.y = 300;
+	pos.x = 20;
+	pos.y = 100;
 	spacing = 30;
 }
 
