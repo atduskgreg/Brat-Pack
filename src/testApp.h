@@ -1,10 +1,10 @@
 #ifndef _TEST_APP
 #define _TEST_APP
 
-
 #include "ofMain.h"
+#include "MyButton.h"
 
-class testApp : public ofBaseApp{
+class testApp : public ofBaseApp {
 
 	public:
 		void setup();
@@ -18,7 +18,9 @@ class testApp : public ofBaseApp{
 		void mousePressed(int x, int y, int button);
 		void mouseReleased(int x, int y, int button);
 		void windowResized(int w, int h);
-
+	private:
+	
+	MyButton * btn;
 };
 
 #endif
