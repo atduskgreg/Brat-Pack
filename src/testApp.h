@@ -2,8 +2,9 @@
 #define _TEST_APP
 
 #include "ofMain.h"
-#include "NewProjectButton.h"
+#include "CustomButton.h"
 #include "ProjectList.h"
+#include "ofxFileDialog.h"
 
 class testApp : public ofBaseApp {
 
@@ -22,7 +23,12 @@ class testApp : public ofBaseApp {
 	private:
 	
 	ProjectList * project_list;
-	NewProjectButton * btn;
+	std::vector<string> files;
+	
+	CustomButton * btn;
+	
+	void openFolderDialog();
+	void generateProject();
 };
 
 #endif

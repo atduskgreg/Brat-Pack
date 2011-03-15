@@ -6,13 +6,45 @@ void testApp::setup()
 	project_list = new ProjectList();
 	project_list->load_projects();
 	
-	btn = new NewProjectButton(10, 10, "newproject.png", project_list);
+	btn = new CustomButton("newproject.png");
+	btn->setPos(10, 10);
 }
 
 //--------------------------------------------------------------
 void testApp::update()
 {
 	project_list->update();
+	
+	if(btn->isMousePressed())
+	{
+		openFolderDialog();
+	}
+}
+
+void testApp::openFolderDialog()
+{
+	dialogSettings s;
+	s.canChooseFolders = true;
+	s.canChooseFiles = false;
+	s.allowMultipleSelection = false;
+	files = openDialog(s);
+	
+	if(files.size() > 0)
+	{
+		generateProject();
+	}
+}
+
+void testApp::generateProject()
+{	
+	string command = ofToDataPath("ruby/new_sinatra_app.rb", true);
+	string result = "ruby " + Tools::getEscapedPath(command) + " '" + command + "' '" +  files[0] + "'";
+	system(result.c_str());
+	
+	Project * p = new Project();
+	p->path = files[0];
+	p->name = Tools::getFolderNameFromPath(files[0]);
+	project_list->save_project(p);
 }
 
 //--------------------------------------------------------------

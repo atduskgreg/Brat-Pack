@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A5A46312132FB21500867BE1 /* ofxMSAInteractiveObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5A4630E132FB21500867BE1 /* ofxMSAInteractiveObject.cpp */; };
-		A5A46328132FB3CC00867BE1 /* NewProjectButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5A46327132FB3CC00867BE1 /* NewProjectButton.cpp */; };
 		A5A4640B132FBCC200867BE1 /* ofxFileDialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5A46408132FBCC200867BE1 /* ofxFileDialog.cpp */; };
 		A5A4640C132FBCC200867BE1 /* ofxFileDialogMac.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5A4640A132FBCC200867BE1 /* ofxFileDialogMac.mm */; };
 		A5A464DB132FCD5A00867BE1 /* Project.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5A464DA132FCD5A00867BE1 /* Project.cpp */; };
@@ -92,8 +91,6 @@
 /* Begin PBXFileReference section */
 		A5A4630E132FB21500867BE1 /* ofxMSAInteractiveObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxMSAInteractiveObject.cpp; path = src/ofxMSAInteractiveObject.cpp; sourceTree = "<group>"; };
 		A5A4630F132FB21500867BE1 /* ofxMSAInteractiveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxMSAInteractiveObject.h; path = src/ofxMSAInteractiveObject.h; sourceTree = "<group>"; };
-		A5A46326132FB3CC00867BE1 /* NewProjectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewProjectButton.h; sourceTree = "<group>"; };
-		A5A46327132FB3CC00867BE1 /* NewProjectButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NewProjectButton.cpp; sourceTree = "<group>"; };
 		A5A46408132FBCC200867BE1 /* ofxFileDialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxFileDialog.cpp; sourceTree = "<group>"; };
 		A5A46409132FBCC200867BE1 /* ofxFileDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxFileDialog.h; sourceTree = "<group>"; };
 		A5A4640A132FBCC200867BE1 /* ofxFileDialogMac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ofxFileDialogMac.mm; sourceTree = "<group>"; };
@@ -261,8 +258,6 @@
 		A5A4654B132FD54400867BE1 /* buttons */ = {
 			isa = PBXGroup;
 			children = (
-				A5A46326132FB3CC00867BE1 /* NewProjectButton.h */,
-				A5A46327132FB3CC00867BE1 /* NewProjectButton.cpp */,
 				A5A46592132FD90A00867BE1 /* CustomButton.h */,
 				A5A46593132FD90A00867BE1 /* CustomButton.cpp */,
 			);
@@ -647,7 +642,6 @@
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* testApp.cpp in Sources */,
 				A5A46312132FB21500867BE1 /* ofxMSAInteractiveObject.cpp in Sources */,
-				A5A46328132FB3CC00867BE1 /* NewProjectButton.cpp in Sources */,
 				A5A4640B132FBCC200867BE1 /* ofxFileDialog.cpp in Sources */,
 				A5A4640C132FBCC200867BE1 /* ofxFileDialogMac.mm in Sources */,
 				A5A464DB132FCD5A00867BE1 /* Project.cpp in Sources */,
