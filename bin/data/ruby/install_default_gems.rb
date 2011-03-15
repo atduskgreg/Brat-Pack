@@ -4,7 +4,6 @@ gems = [
   "sinatra",
   "dm-core",
   "dm-migrations",
-  "shotgun",
   "vegas"
 ]
 
