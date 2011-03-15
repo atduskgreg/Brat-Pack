@@ -31,7 +31,8 @@ void ProjectList::load_projects()
 			{
 				Project * project = new Project();
 				project->setPos(xPos, yPos + (30 * i));
-				project->folder = _xml.getAttribute("project", "folder", "nothing", i);
+				project->path = _xml.getAttribute("project", "path", "nothing", i);
+				project->path = _xml.getAttribute("project", "name", "nothing", i);
 				projects.push_back(project);
 			}
 			
@@ -50,7 +51,8 @@ void ProjectList::save_project(Project * p)
 	
 	int numtags = _xml.getNumTags("project");
 	_xml.addTag("project");
-	_xml.addAttribute("project", "folder", p->folder, numtags);
+	_xml.addAttribute("project", "path", p->path, numtags);
+	_xml.addAttribute("project", "name", p->name, numtags);
 	
 	_xml.popTag();
 	

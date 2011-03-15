@@ -15,7 +15,9 @@ public:
 	void update(); 
 	void draw(); 
 	
-	string folder;
+	string path;
+	string name;
+	
 	bool running;
 	
 	CustomButton * start;

@@ -53,7 +53,8 @@ void NewProjectButton::onPress(int x, int y, int button)
 	cout << result << endl;
 	
 	Project * p = new Project();
-	p->folder = files[0];
+	p->path = files[0];
+	p->name = split[split.size() - 1];
 	project_list->save_project(p);
 }
 

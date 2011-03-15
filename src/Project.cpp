@@ -24,22 +24,12 @@ void Project::draw()
 {
 	ofSetColor(0, 0, 0);
 	ofFill();
-	ofDrawBitmapString(folder, pos.x, pos.y);
+	ofDrawBitmapString(name, pos.x, pos.y);
 	
 	ofSetColor(255, 255, 255);
 	ofEnableAlphaBlending();
 	
-	if(!running)
-	{
-		start->draw();
-		
-		if(start->isMousePressed())
-		{
-			running = true;
-			cout << "Start server \n";
-		}
-	}
-	else 
+	if(running)
 	{
 		stop->draw();
 		
@@ -47,6 +37,18 @@ void Project::draw()
 		{
 			running = false;
 			cout << "Stop server \n";
+		}
+	}
+	else
+	{
+		start->draw();
+		
+		if(start->isMousePressed())
+		{
+			running = true;
+			cout << "Stop server \n";
+			
+			// shell
 		}
 	}
 
@@ -58,5 +60,5 @@ void Project::setPos(int newX, int newY)
 	pos.x = newX; 
 	pos.y = newY;  
 	start->setPos(pos.x + 200, pos.y);
-	stop->setPos(pos.x + 200, pos.y);
+	stop->setPos(pos.x + 335, pos.y);
 }
