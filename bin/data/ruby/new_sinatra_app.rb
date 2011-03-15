@@ -3,6 +3,11 @@ require 'fileutils'
 ruby_dir = ARGV[0]
 destination = ARGV[1]
 
-destination.gsub!(' ', '\ ')
+destination = destination.gsub(' ', '\ ')
+ruby_dir = ruby_dir.gsub(' ', '\ ')
 
-FileUtils.cp_r("#{ruby_dir}/template", destination)
+parts = ruby_dir.split(/\//)
+parts.pop
+ruby_dir = parts.join("/")
+
+`cp #{ruby_dir}/template/* #{destination}`
