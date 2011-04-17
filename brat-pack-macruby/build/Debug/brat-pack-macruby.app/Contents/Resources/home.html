@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+  <head>
+    <title>Brat Pack</title>
+  </head>
+  <script src="http://code.jquery.com/jquery-1.4.2.min.js" ></script>
+
+  <script>
+    $(window).load(function () {
+    
+      showManager = function(){
+        $("body").append(projectManager.name());
+        
+        return "showing";
+      }
+    
+      addProject = function(name){
+        $("#projectList").append("<li>"+name+" [<a class='startApp' href='#' id='"+name+"'>start app</a>]</li>")
+        $("#" + name).click(function(){
+              $("body").append(name);
+  
+          projectManager.start_(name);
+        });
+
+      };
+    });
+  </script>
+  
+  
+  <body>
+  <h1>Welcome to Brat Pack!</h1>
+  
+  
+  <h2>Project List</h2>
+  <ul id="projectList">
+  </ul>
+  
+  </body>
+</html>

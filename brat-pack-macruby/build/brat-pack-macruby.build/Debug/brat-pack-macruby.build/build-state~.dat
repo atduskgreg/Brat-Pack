@@ -1,0 +1,166 @@
+Tbrat-pack-macruby
+v7
+r0
+t324624012.064346
+cCheck dependencies
+cProcessInfoPlistFile /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Info.plist Info.plist
+cCopyStringsFile /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+cCpResource build/Debug/brat-pack-macruby.app/Contents/Resources/rb_main.rb rb_main.rb
+cCompileXIB /Users/greg/code/Brat-Pack/brat-pack-macruby/English.lproj/MainMenu.xib
+cCompileC build/brat-pack-macruby.build/Debug/brat-pack-macruby.build/Objects-normal/x86_64/main.o /Users/greg/code/Brat-Pack/brat-pack-macruby/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/MacOS/brat-pack-macruby normal x86_64
+cTouch /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app
+
+N/Developer/SDKs/MacOSX10.5.sdk
+c000000004B7E366000000000000000EE
+t1266562656
+s238
+
+N/Developer/SDKs/MacOSX10.5.sdk/Library/Frameworks/MacRuby.framework/Headers/MacRuby.h
+c000000004D8A73F90000000000000106
+t1300919289
+s262
+
+N/Library/Frameworks/MacRuby.framework/MacRuby
+c000000004D8A76C30000000000CA2B94
+t1300920003
+s13249428
+
+N/System/Library/Frameworks/Cocoa.framework/Cocoa
+c000000004A1F2D63000000000000A5E0
+t1243557219
+s42464
+
+N/Users/greg/code/Brat-Pack/brat-pack-macruby/English.lproj/InfoPlist.strings
+c000000004DA926BC00000000000000CA
+t1302931132
+s202
+
+N/Users/greg/code/Brat-Pack/brat-pack-macruby/English.lproj/MainMenu.xib
+c000000004DA926BC000000000001B56C
+t1302931132
+s111980
+
+N/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app
+t1302931212
+s102
+
+N/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Info.plist
+t1302931210
+s799
+
+N/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/MacOS/brat-pack-macruby
+t1302931212
+s9088
+
+N/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/PkgInfo
+t1302931210
+s8
+
+N/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Resources/English.lproj/InfoPlist.strings
+t1302931210
+s202
+
+N/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Resources/English.lproj/MainMenu.nib
+t1302931210
+s19275
+
+N/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Resources/rb_main.rb
+t1302931210
+s630
+
+N/Users/greg/code/Brat-Pack/brat-pack-macruby/build/brat-pack-macruby.build/Debug/brat-pack-macruby.build/Objects-normal/x86_64/brat-pack-macruby.LinkFileList
+c000000004DA9270A0000000000000086
+t1302931210
+s134
+
+N/Users/greg/code/Brat-Pack/brat-pack-macruby/build/brat-pack-macruby.build/Debug/brat-pack-macruby.build/Objects-normal/x86_64/main.o
+t1302931211
+s5364
+
+N/Users/greg/code/Brat-Pack/brat-pack-macruby/main.m
+c000000004DA926BC0000000000000106
+t1302931132
+s262
+i<MacRuby/MacRuby.h>
+
+N/Users/greg/code/Brat-Pack/brat-pack-macruby/rb_main.rb
+c000000004DA926BC0000000000000276
+t1302931132
+s630
+
+NInfo.plist
+c000000004DA926BC000000000000034E
+t1302931132
+s846
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies324624010#324624010#0(0"0(0#1#0"8611555872#0"0#
+
+CCompileC build/brat-pack-macruby.build/Debug/brat-pack-macruby.build/Objects-normal/x86_64/main.o /Users/greg/code/Brat-Pack/brat-pack-macruby/main.m normal x86_64 objective-c com.apple.compilers.gcc.4_2
+s324624010.742865
+e324624011.348507
+r1
+xCompileC
+xbuild/brat-pack-macruby.build/Debug/brat-pack-macruby.build/Objects-normal/x86_64/main.o
+x/Users/greg/code/Brat-Pack/brat-pack-macruby/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/greg/code/Brat-Pack/brat-pack-macruby/main.m324624010#324624011#0(0"0(0#0#51"/Users/greg/code/Brat-Pack/brat-pack-macruby/main.m8612578720#1117"    cd /Users/greg/code/Brat-Pack/brat-pack-macruby    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x objective-c -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.5.sdk -mfix-and-continue -fobjc-gc-only -mmacosx-version-min=10.5 -gdwarf-2 -I/Users/greg/code/Brat-Pack/brat-pack-macruby/build/brat-pack-macruby.build/Debug/brat-pack-macruby.build/brat-pack-macruby.hmap -F/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug -F/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug -I/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/include -I/Users/greg/code/Brat-Pack/brat-pack-macruby/build/brat-pack-macruby.build/Debug/brat-pack-macruby.build/DerivedSources/x86_64 -I/Users/greg/code/Brat-Pack/brat-pack-macruby/build/brat-pack-macruby.build/Debug/brat-pack-macruby.build/DerivedSources -c /Users/greg/code/Brat-Pack/brat-pack-macruby/main.m -o /Users/greg/code/Brat-Pack/brat-pack-macruby/build/brat-pack-macruby.build/Debug/brat-pack-macruby.build/Objects-normal/x86_64/main.o0#
+
+CCompileXIB /Users/greg/code/Brat-Pack/brat-pack-macruby/English.lproj/MainMenu.xib
+s324624010.491589
+e324624010.742771
+r1
+xCompileXIB
+x/Users/greg/code/Brat-Pack/brat-pack-macruby/English.lproj/MainMenu.xib
+lSLF07#2@37"CompileXIB English.lproj/MainMenu.xib324624010#324624010#0(0"0(0#0#71"/Users/greg/code/Brat-Pack/brat-pack-macruby/English.lproj/MainMenu.xib8613863936#392"    cd /Users/greg/code/Brat-Pack/brat-pack-macruby    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Resources/English.lproj/MainMenu.nib /Users/greg/code/Brat-Pack/brat-pack-macruby/English.lproj/MainMenu.xib --sdk /Developer/SDKs/MacOSX10.5.sdk0#
+
+CCopyStringsFile /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Resources/English.lproj/InfoPlist.strings English.lproj/InfoPlist.strings
+s324624010.489001
+e324624010.527449
+r1
+xCopyStringsFile
+x/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Resources/English.lproj/InfoPlist.strings
+xEnglish.lproj/InfoPlist.strings
+lSLF07#2@36"Copy English.lproj/InfoPlist.strings324624010#324624010#0(0"0(0#0#76"/Users/greg/code/Brat-Pack/brat-pack-macruby/English.lproj/InfoPlist.strings8618669888#388"    cd /Users/greg/code/Brat-Pack/brat-pack-macruby    setenv ICONV /usr/bin/iconv    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-16 --outputencoding UTF-16 English.lproj/InfoPlist.strings --outdir /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Resources/English.lproj0#
+
+CCpResource build/Debug/brat-pack-macruby.app/Contents/Resources/rb_main.rb rb_main.rb
+s324624010.489932
+e324624010.499043
+r1
+xCpResource
+xbuild/Debug/brat-pack-macruby.app/Contents/Resources/rb_main.rb
+xrb_main.rb
+lSLF07#2@15"Copy rb_main.rb324624010#324624010#0(0"0(0#0#55"/Users/greg/code/Brat-Pack/brat-pack-macruby/rb_main.rb8614279872#354"    cd /Users/greg/code/Brat-Pack/brat-pack-macruby    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/greg/code/Brat-Pack/brat-pack-macruby/rb_main.rb /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Resources0#
+
+CLd /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/MacOS/brat-pack-macruby normal x86_64
+s324624011.348602
+e324624012.060534
+r1
+xLd
+x/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/MacOS/brat-pack-macruby
+xnormal
+xx86_64
+lSLF07#2@116"Link /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/MacOS/brat-pack-macruby324624011#324624012#0(0"0(0#0#0"8618060512#700"    cd /Users/greg/code/Brat-Pack/brat-pack-macruby    setenv MACOSX_DEPLOYMENT_TARGET 10.5    /Developer/usr/bin/gcc-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.5.sdk -L/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug -F/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug -F/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug -filelist /Users/greg/code/Brat-Pack/brat-pack-macruby/build/brat-pack-macruby.build/Debug/brat-pack-macruby.build/Objects-normal/x86_64/brat-pack-macruby.LinkFileList -mmacosx-version-min=10.5 -framework Cocoa -framework MacRuby -o /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/MacOS/brat-pack-macruby0#
+
+CProcessInfoPlistFile /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Info.plist Info.plist
+s324624010.485914
+e324624010.488916
+r1
+xProcessInfoPlistFile
+x/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Info.plist
+xInfo.plist
+lSLF07#2@18"Process Info.plist324624010#324624010#0(0"0(0#0#55"/Users/greg/code/Brat-Pack/brat-pack-macruby/Info.plist8607029472#340"    cd /Users/greg/code/Brat-Pack/brat-pack-macruby    builtin-infoPlistUtility Info.plist -genpkginfo /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/PkgInfo -expandbuildsettings -platform macosx -o /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app/Contents/Info.plist0#
+
+CTouch /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app
+s324624012.060755
+e324624012.064284
+r1
+xTouch
+x/Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app
+lSLF07#2@84"Touch /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app324624012#324624012#0(0"0(0#0#0"8618332352#153"    cd /Users/greg/code/Brat-Pack/brat-pack-macruby    /usr/bin/touch -c /Users/greg/code/Brat-Pack/brat-pack-macruby/build/Debug/brat-pack-macruby.app0#
+
