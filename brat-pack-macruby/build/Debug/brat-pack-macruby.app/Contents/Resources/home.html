@@ -7,22 +7,58 @@
 
   <script>
     $(window).load(function () {
-    
-      showManager = function(){
-        $("body").append(projectManager.name());
-        
-        return "showing";
-      }
-    
-      addProject = function(name){
-        $("#projectList").append("<li>"+name+" [<a class='startApp' href='#' id='"+name+"'>start app</a>]</li>")
-        $("#" + name).click(function(){
-              $("body").append(name);
-  
-          projectManager.start_(name);
-        });
 
-      };
+
+      displayProject = function(p){
+        result = "<li>";
+        result += p.name();
+        if(p.running()){
+          result += "[<a class='stopApp' href='#' id='"+p.id()+"'>stop app</a>]";
+        } else {
+          result += "[<a class='startApp' href='#' id='"+p.id()+"'>start app</a>]";
+        }
+        
+        result += "</li>";
+        
+        return result;
+      }
+      
+      findProject = function(projectID){
+        result = null;
+        for(var i = 0; i < ProjectManager.projects().length; i++){
+        
+          if(ProjectManager.projects()[i].id() == projectID){
+
+            result = ProjectManager.projects()[i];
+          }
+        }
+        return result;
+      }
+      
+      displayProjects = function(){
+        $("#projectList li").remove();
+
+        for(var i = 0; i < ProjectManager.projects().length; i++){
+            project = ProjectManager.projects()[i];            
+            $("#projectList").append(displayProject(project));
+            
+        }
+        
+        $("#projectList .stopApp").click(function(){
+              project = findProject(parseInt($(this).attr('id'))); //ProjectManager.projects()[parseInt($(this).attr('id'))];
+              ProjectManager.stop_(project);
+              displayProjects();
+              return false;
+        });
+        
+         $("#projectList .startApp").click(function(){
+              project = findProject(parseInt($(this).attr('id'))); 
+              ProjectManager.start_(project);
+              displayProjects();
+              return false;
+        });
+      }
+        
     });
   </script>
   

@@ -4,44 +4,8 @@
 # Created by Greg Borenstein on 4/16/11.
 # Copyright 2011 __MyCompanyName__. All rights reserved.
 
-class Project
-  attr_accessor :name
-  
-  def initialize(name)
-    @name = name
-  end
-
-  def self.create_many_projects
-    [Project.new("Color"), Project.new("Is the Floor Open?"), Project.new("Exegist")]
-  end
-  
- 
-  
-  def start
-    puts `say started #{self.name}`
-  end
-  
-  def self.isSelectorExcludedFromWebScript(sel); false end
-
-end
-
-class ProjectManager
-  attr_accessor :projects, :name
-
-    
-  def say_hello
-    puts `say hello`
-    6
-  end
-    
-  def start(n)
-    puts `say started: #{n}`
-  end
-
-  def self.isSelectorExcludedFromWebScript(sel); false end
-
-end
-
+require 'Project'
+require 'ProjectManager'
 
 class BratPackDelegate
   attr_accessor :web_view, :js_engine
@@ -56,18 +20,19 @@ class BratPackDelegate
 
 
     @project_manager = ProjectManager.new
-    @project_manager.name = "joe"
+    #@project_manager.name = "joe"
     @project_manager.projects = Project.create_many_projects
-        
+     #@projects = Project.create_many_projects   
   end
   
   def webView(view, didFinishLoadForFrame:frame)
     @js_engine = view.windowScriptObject # windowScriptObject
-    @js_engine.setValue(@project_manager, forKey: "projectManager")
-    @project_manager.respondsToSelector("start")
-    @project_manager.respondsToSelector("say_hello")
+    @js_engine.setValue(@project_manager, forKey: "ProjectManager")
+    @project_manager.respondsToSelector("start:")
+    @project_manager.respondsToSelector("stop:")
+
     @project_manager.respondsToSelector("projects")
-    @project_manager.respondsToSelector("name")
+    #@project_manager.respondsToSelector("name")
 
     #@js_engine.setValue(@projects, forKey: "projects")
     
@@ -76,15 +41,20 @@ class BratPackDelegate
     
     #puts @project_manager.start("foo")
     
+
     
-    @project_manager.projects.each do |project|
-    
-      #project.respondsToSelector("start")
-      #puts @js_engine.evaluateWebScript('project.name()')
+    @project_manager.projects.each_with_index do |project,i|
+      project.respondsToSelector("name")
+      project.respondsToSelector("running")
+      project.respondsToSelector("id")
       
-      @js_engine.evaluateWebScript("addProject('#{project.name}')")
+     #@js_engine.evaluateWebScript("addProject(ProjectManager.projects()[#{i}])")
     end
     
+    
+    
+    @js_engine.evaluateWebScript('displayProjects()')
+
     
     #puts @project_manager.name()
     #puts @js_engine.evaluateWebScript("projectManager.start_('cats')")
