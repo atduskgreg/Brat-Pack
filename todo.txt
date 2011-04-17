@@ -1,5 +1,9 @@
-Create new sinatra app
-Start / stop sinatra app
-Run with shotgun
-gem management
-Deploy to heroku
+
+	Solving restart problem
+	Open in browser
+	Store PID and URL files within app
+	Delete project
+	gem management
+	Deploy to heroku
+	
+	=> UI design
