@@ -35,6 +35,13 @@
         return result;
       }
       
+      $("#frameNav li a").click(function(){
+        $("body").append($(this).attr('href'));
+        $("#webDocs").attr('src', $(this).attr('href'));
+        return false;
+      
+      });
+      
       displayProjects = function(){
         $("#projectList li").remove();
 
@@ -45,7 +52,7 @@
         }
         
         $("#projectList .stopApp").click(function(){
-              project = findProject(parseInt($(this).attr('id'))); //ProjectManager.projects()[parseInt($(this).attr('id'))];
+              project = findProject(parseInt($(this).attr('id')));
               ProjectManager.stop_(project);
               displayProjects();
               return false;
@@ -71,5 +78,10 @@
   <ul id="projectList">
   </ul>
   
+  <ul id="frameNav">
+    <li><a href="http://sinatrarb.com">Sinatra docs</a></li>
+    <li><a href="http://itpedia.nyu.edu/wiki/RubyWebDev">ITPedia Ruby page</a></li>
+  </ul>
+  <iframe id="webDocs" src="http://sinatrarb.com" width="800" height="400" />
   </body>
 </html>
